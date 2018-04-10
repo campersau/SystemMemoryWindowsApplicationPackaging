@@ -11,4 +11,4 @@ System.BadImageFormatException
 
 It looks like `Windows Application Packaging Project`s are using the `ref` dlls instead of the `lib` ones.
 
-Copying the `System.Memory` dll from `C:\Users\xxx\.nuget\packages\system.memory\x.x.x\lib\netstandard2.0` will fix the issue.
+Copying the `System.Memory` dll from `C:\Users\xxx\.nuget\packages\system.memory\x.x.x\lib\netstandard2.0` into `WapProj\bin\xxx\yyy\AppX\WpfApp` will fix the issue.
