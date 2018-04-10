@@ -1,5 +1,3 @@
-`System.Memory` does not work with `Windows Application Packaging Project`s.
-
 Set `WapProj` as startup project and hit F5. Then the following exception is thrown:
 
 ```
@@ -10,3 +8,7 @@ System.BadImageFormatException
   StackTrace:
 <Cannot evaluate the exception stack trace>
 ```
+
+It looks like `Windows Application Packaging Project`s are using the `ref` dlls instead of the `lib` ones.
+
+Copying the `System.Memory` dll from `C:\Users\xxx\.nuget\packages\system.memory\x.x.x\lib\netstandard2.0` will fix the issue.
